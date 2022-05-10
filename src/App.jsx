@@ -1,6 +1,7 @@
 import { Route, Switch} from 'react-router-dom';
-import Detail from './views/Characters/Detail';
 import List from './views/Characters/List';
+import Detail from './views/Characters/Detail';
+
 
 
 export default function App() {

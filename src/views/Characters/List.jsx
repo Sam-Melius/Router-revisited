@@ -2,11 +2,12 @@ import { useEffect, useState} from 'react';
 import { useLocation, useHistory, Link } from 'react-router-dom';
 
 export default function List() {
+  const location = useLocation();
+  const history = useHistory();
   const [characters, setCharacters] = useState([]);
   const [loading, setLoading] = useState(true);
   const status = new URLSearchParams(location.search).get('status') ?? 'all';
-  const location = useLocation();
-  const history = useHistory();
+  
 
   const handleStatus = (event) => {
     history.push(`/?status=${event.target.value}`);
